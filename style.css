@@ -1,0 +1,115 @@
+/* Base font size for rem units */
+html {
+    font-size: 50%;
+}
+
+/* Body styling for layout and default text */
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 30rem;
+    padding-left: 40.5rem;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 1.6rem;
+}
+
+/* Container for the text lines */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2rem; /* Adjust as needed for the red line */
+    position: relative;
+}
+
+/* Vertical red line before the container */
+.container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11rem; /* Adjust this value to start the vertical line from the second line */
+    height: 17.7rem; /* Adjust this value to cover from the second to the fourth line */
+    width: 0.5rem; /* Red line thickness */
+    background-color: red;
+}
+
+/* General styling for each line of text */
+.line {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 5px; /* Revert to default or a small positive value */
+    position: relative;
+}
+
+/* Styling for the first line of text */
+.line-1 {
+    font-size: 6.4rem;
+    line-height: 1.2;
+    margin-left: -36.4rem; /* Move the first line further left */
+    margin-top: 2rem; /* Move the first line down */
+    margin-bottom: -11.5rem; /* Adjust to shorten line spacing between line 1 and line 2 */
+}
+
+/* Styling for the second line of text */
+.line-2 {
+    font-size: 6.4rem;
+    line-height: 1.2;
+    padding-left: 2rem;
+    margin-bottom: -2.5rem; /* Adjust to shorten line spacing between line 2 and line 3 */
+}
+
+/* Styling for the red text within the second line */
+.line-2 .text-red-zh {
+    color: red;
+    font-size: 3em; /* Make numbers larger */
+    margin: 0 1rem;
+}
+
+/* Styling for the third and fourth lines of text */
+.line-3,
+.line-4 {
+    font-size: 4rem;
+    line-height: 1.2;
+    padding-left: 2rem;
+}
+
+/* Styling for white Chinese text */
+.text-white-zh {
+    color: white;
+}
+
+/* Styling for white English text */
+.text-white-en {
+    color: white;
+}
+
+/* Adds margin to all but the last English text span in the third line */
+.line-3 .text-white-en:not(:last-child) {
+    margin-right: 1.2rem;
+}
+
+/* Adds margin to all but the last English text span in the fourth line */
+.line-4 .text-white-en:not(:last-child) {
+    margin-right: 1.2rem;
+}
+
+/* Styling for red Chinese text */
+.text-red-zh {
+    color: red;
+}
+
+/* Styling for red English text */
+.text-red-en {
+    color: red;
+}
+
+/* Adds margin to all but the last English red text span in the fourth line */
+.line-4 .text-red-en:not(:last-child) {
+    margin-right: 1.2rem;
+}
+
